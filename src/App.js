@@ -1,26 +1,25 @@
 
 import React from 'react';
-import {StyleSheet, View, Image, Text, SafeAreaView, Switch, TouchableOpacity, Alert} from 'react-native';
+import {StyleSheet, View, Image, Text, TouchableOpacity, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import foto from './assets/foto.jpg';
-
-
+import Card from './components/Card'
 
 const App = () => {
  
   function handleRedeSocial(rede_social){
 
-    Switch (rede_social) {
+    switch (rede_social) {
 
       case 'linkedin':
-        Alert.alert('Meu Linkedin','http://www.linkedin.com/in/tiago-merc%C3%AAs-ros%C3%A1rio-b6177b85')
+        Alert.alert('Meu Linkedin','http://www.linkedin.com/in/tiago-merc%C3%AAs-ros%C3%A1rio-b6177b85');
         break
       case 'github':
-        Alert.alert('Meu GitHub','https://github.com/TiagoMerc/')
+        Alert.alert('Meu GitHub','https://github.com/TiagoMerc/');
         break
-      case 'facebook':
-        Alert.alert('Meu Facebook','https://twitter.com/TiagoTMR_7?t=wwZHBorEl7dUIguoa8tl7A&s=08')    
+      case 'twitter':
+        Alert.alert('Meu Twitter','https://twitter.com/TiagoTMR_7?t=wwZHBorEl7dUIguoa8tl7A&s=08');    
         break  
     }
   }
@@ -36,8 +35,8 @@ const App = () => {
               <TouchableOpacity onPress={() => handleRedeSocial('github')}>
                 <Icon name="github" size={30}/>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => handleRedeSocial('facebook')}>
-                <Icon name="facebook" size={30}/>
+              <TouchableOpacity onPress={() => handleRedeSocial('twitter')}>
+                <Icon name="twitter" size={30}/>
               </TouchableOpacity> 
               <TouchableOpacity onPress={() => handleRedeSocial('linkedin')}> 
                 <Icon name="linkedin" size={30}/>
@@ -45,31 +44,18 @@ const App = () => {
              </View>
           </View>
 
-       <View style={style.card_container}>
-            <View style={style.card}>
-              <View style={style.card_header}>
-                <Text>Experiência Profissional</Text>
-              </View>
-              <View style={style.card_content}>
-                <Text style={style.card_content_text}>Logo Ali</Text>
-                <Text style={style.card_content_text}>Araujo Dados Contábeis</Text>
-                <Text style={style.card_content_text}>Alphatech</Text>
-              </View>
-            </View>
-        </View>
+/** Chamando o componentes*/
+    <Card titulo="Formação Acadêmica">
+            <Text style={style.card_content_text}>UFVJM</Text>
+            <Text style={style.card_content_text}>COLMINAS</Text>
+            <Text style={style.card_content_text}>Wise Up</Text>
+    </ Card>
+    <Card titulo="Experiências Profissionais">
+             <Text style={style.card_content_text}>Logo Ali</Text>
+             <Text style={style.card_content_text}>Araujo Dados Contábeis</Text>
+             <Text style={style.card_content_text}>Alphatech</Text>
+    </Card>
 
-        <View style={style.card_container}>
-            <View style={style.card}>
-              <View style={style.card_header}>
-                <Text>Formação Acadêmica</Text>
-              </View>
-              <View style={style.card_content}>
-                <Text style={style.card_content_text}>UFVJM</Text>
-                <Text style={style.card_content_text}>COLMINAS</Text>
-                <Text style={style.card_content_text}>ALURA</Text>
-              </View>
-            </View>
-        </View>
       </View>
    
    </>
@@ -106,23 +92,6 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '60%',
-    marginTop: 20,
-  },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  card: {
-    width: '60%',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#939393',
-    padding: 10,
-    backgroundColor:'FFF',
-  },
-  card_content: {
     marginTop: 20,
   },
   card_content_text: {
