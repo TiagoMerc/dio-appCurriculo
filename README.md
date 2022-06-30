@@ -7,9 +7,9 @@ Conteúdo:
 
 - Estilos e componentes
 - Flexbox
-- Compnentes e estados
+- Componentes e estados
 
 
-## Criando componentes do Card de Experiências Profissionais e Formação Acadêmica. 
+### Criando componentes do Card de Experiências Profissionais e Formação Acadêmica. 
 
 
