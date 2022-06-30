@@ -1,7 +1,7 @@
 # dio-appCurriculo
 App Curriculo no Bootcamp Avanade - DIO   
 
-Instrutor: Paulo Henrique
+Instrutor: Pablo Henrique
 
 Conteúdo:
 
